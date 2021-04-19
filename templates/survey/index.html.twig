@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <p>Please click the button below to start the survey.</p>
+
+    {{ form_start(form) }}
+        {{ form_row(form.start, { 'label': 'Start survey' }) }}
+    {{ form_end(form) }}
+
+{% endblock %}

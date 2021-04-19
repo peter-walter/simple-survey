@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+        {{ form_row(form.answer) }}
+        {{ form_row(form.next, { 'label': 'Next' }) }}
+    {{ form_end(form) }}
+
+    <nav>
+        <a class="back" href="#" onclick="window.history.back()">Back</a> |
+        <a class="start" href="{{ path('survey') }}">Start again</a>
+    </nav>
+
+{% endblock %}

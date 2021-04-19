@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="summary">
+        <tr>
+            <th>Question</th>
+            <th>Your Response</th>
+            <th></th>
+        </tr>
+        {% for response in responses %}
+            <tr>
+                <td class="question">{{ response.question }}</td>
+                <td class="answer">{{ response.answer }}</td>
+                <td class="edit"><a href="{{ path('question', {id: response.id}) }}">Edit</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

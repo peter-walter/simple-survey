@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: Lato, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+h1 {
+    margin-bottom: 5rem;
+}
+
+form {
+    & > div > label {
+        font-size: 126%;
+    }
+
+    div#form_answer {
+        & > input {
+            display: none;
+        }
+
+        & > label {
+            display: inline-block;
+            font-size: 126%;
+            font-weight: normal;
+            border: 1px solid black;
+            background: lightblue;
+            color: white;
+            padding: 1rem 2rem;
+            margin: 1rem;
+            transition: background-color 500ms ease;
+        }
+
+        & > input:checked + label,
+        & > label:hover {
+            background: darkblue;
+        }
+    }
+
+    textarea#form_answer {
+        display: block;
+        width: calc(100% - 4rem);
+        height: 15rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    button {
+        float: right;
+        font-size: 126%;
+        font-weight: normal;
+        border: 1px solid black;
+        background: lightblue;
+        color: white;
+        padding: 1rem 2rem;
+        margin: 1rem;
+        transition: background-color 500ms ease;
+    }
+
+    button:hover {
+        background: darkblue;
+    }
+
+    button:after {
+        content: " >";
+    }
+
+}
+
+
+table.summary {
+    border-spacing: 0.5em;
+
+    th {
+        font-size: 126%;
+        text-align: left;
+    }
+
+    td.question, td.answer {
+        width: 45%;
+    }
+}
+
+nav {
+    padding-top: 2rem;
+}
